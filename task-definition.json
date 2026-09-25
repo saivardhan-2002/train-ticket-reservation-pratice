@@ -1,16 +1,16 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:704298683540:task-definition/naveen-task:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:704298683540:task-definition/rahultask:1",
     "containerDefinitions": [
         {
-            "name": "Main",
-            "image": "704298683540.dkr.ecr.us-east-1.amazonaws.com/vicky@sha256:49248a810149c1766b0c2bb0bc20db105a69fcc21949bcefbf140e4ae2a7515e",
+            "name": "container1",
+            "image": "704298683540.dkr.ecr.us-east-1.amazonaws.com/rahul@sha256:4a6a557505b79261b7318f3b3ffa00e10287fd049943fe3490729888066e834f",
             "cpu": 0,
             "portMappings": [
                 {
                     "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp",
-                    "name": "main-80-tcp",
+                    "name": "container1-80-tcp",
                     "appProtocol": "http"
                 }
             ],
@@ -23,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/naveen-task",
+                    "awslogs-group": "/ecs/rahultask",
                     "awslogs-create-group": "true",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
@@ -33,8 +33,8 @@
             "systemControls": []
         }
     ],
-    "family": "naveen-task",
-    "taskRoleArn": "arn:aws:iam::704298683540:role/ECS-role-4a776f12",
+    "family": "rahultask",
+    "taskRoleArn": "arn:aws:iam::704298683540:role/ECS-role-76785ba3",
     "executionRoleArn": "arn:aws:iam::704298683540:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -83,11 +83,12 @@
         "operatingSystemFamily": "LINUX"
     },
     "requiresCompatibilities": [
-        "FARGATE"
+        "EC2",
+        "MANAGED_INSTANCES"
     ],
     "cpu": "1024",
     "memory": "3072",
-    "registeredAt": "2026-09-25T08:14:46.135Z",
+    "registeredAt": "2026-09-25T09:33:12.391Z",
     "registeredBy": "arn:aws:iam::704298683540:root",
     "enableFaultInjection": false,
     "tags": []
