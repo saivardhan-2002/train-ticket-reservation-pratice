@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      ECR_REPOSITORY: vicky
+      ECR_REPOSITORY: rahul
 
     steps:
 
