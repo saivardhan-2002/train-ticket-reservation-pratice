@@ -1,16 +1,16 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:704298683540:task-definition/creative-servicevicky:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:704298683540:task-definition/naveen-task:1",
     "containerDefinitions": [
         {
-            "name": "container",
-            "image": "704298683540.dkr.ecr.us-east-1.amazonaws.com/vicky@sha256:dbc8e20ad67fe7cd307db44e27c7e38496ee1b8a2617011f41f314999822bff7",
+            "name": "Main",
+            "image": "704298683540.dkr.ecr.us-east-1.amazonaws.com/vicky@sha256:49248a810149c1766b0c2bb0bc20db105a69fcc21949bcefbf140e4ae2a7515e",
             "cpu": 0,
             "portMappings": [
                 {
                     "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp",
-                    "name": "container-80-tcp",
+                    "name": "main-80-tcp",
                     "appProtocol": "http"
                 }
             ],
@@ -23,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/creative-servicevicky",
+                    "awslogs-group": "/ecs/naveen-task",
                     "awslogs-create-group": "true",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
@@ -33,8 +33,8 @@
             "systemControls": []
         }
     ],
-    "family": "creative-servicevicky",
-    "taskRoleArn": "arn:aws:iam::704298683540:role/ECS-role-6bf8c605",
+    "family": "naveen-task",
+    "taskRoleArn": "arn:aws:iam::704298683540:role/ECS-role-4a776f12",
     "executionRoleArn": "arn:aws:iam::704298683540:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -75,8 +75,8 @@
     "placementConstraints": [],
     "compatibilities": [
         "EC2",
-        "FARGATE",
-        "MANAGED_INSTANCES"
+        "MANAGED_INSTANCES",
+        "FARGATE"
     ],
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
@@ -87,7 +87,7 @@
     ],
     "cpu": "1024",
     "memory": "3072",
-    "registeredAt": "2026-09-24T07:35:20.005Z",
+    "registeredAt": "2026-09-25T08:14:46.135Z",
     "registeredBy": "arn:aws:iam::704298683540:root",
     "enableFaultInjection": false,
     "tags": []
